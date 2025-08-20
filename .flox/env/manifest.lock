@@ -26,7 +26,12 @@
       "on-activate": "#   # -> Set variables, create files and directories\n#   # -> Perform initialization steps, e.g. create a python venv\n#   # -> Useful environment variables:\n#   #      - FLOX_ENV_PROJECT=/home/user/example\n#   #      - FLOX_ENV=/home/user/example/.flox/run\n#   #      - FLOX_ENV_CACHE=/home/user/example/.flox/cache\n  export JAVA_HOME=\"$(dirname $(dirname $(realpath $(which java))))\"\n  export PATH=\"$FLOX_ENV_PROJECT/node_modules/.bin:$PATH\"\n\n  # If first time, install the npm packages\n  if [ ! -d \"$FLOX_ENV_PROJECT/node_modules\" ]; then\n    do_npm_install() {\n      cd \"$FLOX_ENV_PROJECT\"\n      npm install\n    }\n    export -f do_npm_install\n    gum spin --title \"Doing npm install...\" -- bash -c do_npm_install\n  fi\n\n  # Check VSCode extensions\n  if [[ \"$(code --list-extensions)\" != *\"c4-dsl-extension\"* ]]; then\n    do_extensions_install() {\n      code --install-extension github.copilot\n      code --install-extension github.copilot-chat\n      code --install-extension jebbs.plantuml\n      code --install-extension systemticks.c4-dsl-extension\n      code --install-extension tintinweb.graphviz-interactive-preview\n    }\n    export -f do_extensions_install\n    gum spin --title \"Installing VSCode extensions...\" -- bash -c do_extensions_install\n  fi\n"
     },
     "profile": {},
-    "options": {}
+    "options": {},
+    "services": {
+      "docusaurus": {
+        "command": "npm start --prefix ./website"
+      }
+    }
   },
   "packages": [
     {

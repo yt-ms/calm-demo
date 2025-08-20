@@ -9,3 +9,4 @@ Instructions:
 - For the CALM schema, use https://calm.finos.org/release/1.0/meta/calm.json
 - References to "C4" are talking about the C4 model for visualizing the architecture of software systems.  "C4 DSL" is synonymous with Structurizr DSL.
 - When generating C4 DSL, make sure to validate it, then work on fixing any errors shown.
+- You don't need to worry about installing or running the docusaurus server, as we will do this manually

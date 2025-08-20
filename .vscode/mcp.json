@@ -5,6 +5,11 @@
             "command": "npx",
             "args": ["studio-mcp", "calm", "validate", "-a", "{{text#Which file do you want to validate?}}"]
         },
+        "generate_calm_documentation": {
+            "type": "stdio",
+            "command": "npx",
+            "args": ["studio-mcp", "calm", "docify", "-o", "./website", "-a", "{{text#Which file do you want to generate documentation for?}}"]
+        },
         "validate_c4_dsl": {
             "type": "stdio",
             "command": "npx",
