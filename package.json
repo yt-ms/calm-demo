@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@finos/calm-cli": "^1.0.0",
+    "studio-mcp": "^0.0.20"
+  }
+}
