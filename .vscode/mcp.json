@@ -1,0 +1,19 @@
+{
+    "servers": {
+        "validate_calm_model": {
+            "type": "stdio",
+            "command": "npx",
+            "args": ["studio-mcp", "calm", "validate", "-a", "{{text#Which file do you want to validate?}}"]
+        },
+        "validate_c4_dsl": {
+            "type": "stdio",
+            "command": "npx",
+            "args": ["studio-mcp", "structurizr-cli", "validate", "-w", "{{text#Which file do you want to validate?}}"]
+        },
+        "generate_plantuml_from_c4_dsl": {
+            "type": "stdio",
+            "command": "npx",
+            "args": ["studio-mcp", "structurizr-cli", "export", "-f", "plantuml", "-o", "plantuml", "-w", "{{text # Which C4 DSL file do you want to export from?}}"]
+        }
+    }
+}
