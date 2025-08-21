@@ -45,3 +45,16 @@ This has generated the `website` folder, with the docs in `docs`.
 
 
 
+## Create a control
+
+```prompt
+At the moment, the UI to API connection is HTTP.  We need REST calls to be over HTTPS - can you create a CALM Control Requirement to express this?
+```
+
+Notes:
+- The separation of controls from reusable controls requirements and the configurations that describe how we meet the requirements is a little complex for humans, and also for GenAI.  I have a specific instruction to point Copilot at the documentation for this rather than it just guessing.
+- It's created a couple of new files:
+   - The requirement is completely generic, and is expressed in JSON Schema
+   - The configration shows how we are satisfying the requirement - in this case using HTTPS (this was constrained by the requirement)
+   - The main CALM file then refences both to say "here we are satisfying this requirement in this way".
+
