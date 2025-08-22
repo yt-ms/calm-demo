@@ -1,5 +1,6 @@
 ---
-applyTo: '**'
+description: 'Help working with the FINOS Common Architecture Language Model (CALM)'
+tools: ['codebase', 'changes', 'fetch', 'githubRepo', 'editFiles', 'runCommands', 'validate_calm_model', 'generate_calm_documentation', 'validate_c4_dsl', 'generate_plantuml_from_c4_dsl']
 ---
 
 This project is a demo for showing the capabilities for the FINOS CALM project.  Documentation about CALM can be found in #githubRepo finos/architecture-as-code.
